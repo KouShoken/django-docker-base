@@ -17,7 +17,7 @@ RUN python manage.py collectstatic --noinput
 
 # 安装和配置nginx
 RUN apt-get update && apt-get install -y nginx
-COPY ./container_cfg/nginx.conf /etc/nginx
+COPY .container_cfg/nginx.conf /etc/nginx
 
 # Copy start script and make it executable
 COPY ./container_cfg/start.sh /app/start.sh
